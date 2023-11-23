@@ -1,5 +1,406 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font, sans-serif);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  background-image: url("../images/cover-image-dark.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+.header,
+.content,
+.footer {
+  margin: clamp(10px, var(--breakpoint-simulation) * 1000, 20px);
+}
+
+/******************************************Header начало************************************************/
+
+.header {
+  display: grid;
+}
+
+.decorated-zone::before {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  justify-self: end;
+}
+
+.decorated-zone::after {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  justify-self: start;
+}
+
+.header__decorative-element {
+  color: var(--accent-color);
+  position: absolute;
+  inset-inline-end: clamp(11px, var(--breakpoint-simulation) * 1000, 20px);
+  inset-block-start: clamp(11px, var(--breakpoint-simulation) * 1000, 21px);
+}
+
+.header__decorative-element::after {
+  content: '';
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow:  0px 0px 4px 3px var(--accent-color);
+  margin: 2px 9px;
+}
+
+.header__theme-menu {
+  display: grid;
+  margin-block-start: clamp(38px, var(--breakpoint-simulation) * 1000, 146px);
+  justify-content: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  row-gap: 13px;
+}
+
+.header__theme-menu-button {
+  padding: 2px 13px 3px;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end : 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--border-hover-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--text-color-header-title);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 82.5%;
+  margin-block-start: clamp(67px, var(--breakpoint-simulation) * 1000, 173px);
+  margin-block-end: clamp(56px, var(--breakpoint-simulation) * 1000, 162px);
+}
+
+.header__description {
+  font-weight: 700;
+  white-space: pre-line;
+  justify-self: end;
+  inline-size: 22.18rem;
+  margin-block-end: clamp(31px, var(--breakpoint-simulation) * 1000, 139px);
+}
+
+/******************************************Header конец************************************************/
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+.card__title {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__link:focus {
+  border: none;
+  outline: none;
+}
+
+.card__link:focus-visible {
+  display: inline-block;  
+  border: 1px solid var(--text-color);
+  line-height: 1em;
+}
+
+.card__link:hover {
+  border: none;
+  border-block-end: 1px solid var(--text-color);
+}
+
+.card__accent {
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.content {
+  padding-block-start: clamp(40px, var(--breakpoint-simulation) * 1000, 59px);
+  display: grid;
+  gap: 50px;
+}
+
+.content__title {
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.explanation,
+.explanation__list,
+.reason,
+.reason__list,
+.recommendation,
+.recommendation__list {
+  display: grid;
+  gap: 20px;
+}
+
+.recommendation__list  .card__title {
+  font-weight: 400;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery__list {
+  display: grid;
+  gap: 5px;
+}
+
+.gallery__list-picture {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 595px auto;
+  margin-block-start: clamp(46px, var(--breakpoint-simulation) * 1000, 80px);
+  justify-items: center;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--text-color-header-title);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 82.5%;
+  padding: 250px 0;
+}
+
+/********************************Медиа запросы - начало********************************/
+
+@media (width < 375px) {
+  .header__decorative-element {
+    inset-inline-end: -14vi;
+  }
+}
+
+@media (width >= 768px) {
+  
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
+  }
+
+  .header__description {
+    inline-size: calc(100% / 2);
+  } 
+  
+  .content {
+    gap: 80px;
+  }
+
+  .explanation {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .reason {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .reason__title {
+    grid-column: 1/2;
+  }
+  
+  .reason__list {
+    grid-column: 1/4;
+  }
+
+  .recommendation {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, auto);
+}
+
+  .recommendation__title-first {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .recommendation__title-second {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .recommendation__list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .gallery__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 192px 230px 318px;
+    gap: 20px;
+  }
+
+  .gallery__list-item:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .gallery__list-item:nth-child(2) {
+    grid-row: span 2;
+  }
+  .gallery__list-item:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery__list-item:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .gallery__list-picture {
+    object-fit: cover;
+    max-inline-size: 100%;
+    block-size: 100%;
+  }
+  
+  .footer {
+    grid-template-rows: auto 933px auto;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding: 420px 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    ". theme decorative"
+    "title title title"
+    "description description description";
+    gap: 10px;
+  }
+
+  .decorated-zone::before {
+    grid-column: -1/-2;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  
+  .decorated-zone::after {
+    grid-column: 1/2;
+    grid-row: -1/-2;
+    align-self: end;
+  }
+
+  .header__theme-menu {
+    display: grid;
+    margin: 0;
+    grid-area: theme;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+  }
+
+  .header__title {
+    margin-block-start: 266px;
+    margin-block-end: 103px;
+    grid-area: title;
+  }
+  
+  .header__description {
+    grid-area: description;
+    margin-block-end: 81px;
+  }
+
+  .explanation {
+    column-gap: 11px;
+  }
+
+  .reason__list {
+    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+  }
+
+  .recommendation {
+    column-gap: 11px;
+  }
+
+  .gallery__list {
+    grid-template-rows: 260px 315px 432px;
+  }
+
+  .footer {
+    grid-template-rows: auto 678px auto;
+  }
+
+  .footer__title {
+    padding: 277px 0;
+  }
+  }
+
+@media (width > 1440px) {
+  .header__decorative-element {
+    inset-inline-end: calc((100vw - 1440px) / 2 + 1.5vi);
+  }
+}
+
+/********************************Медиа запросы - конец********************************/
