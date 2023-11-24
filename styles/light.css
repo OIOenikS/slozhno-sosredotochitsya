@@ -8,13 +8,7 @@
   --bg-color: #fff1f7;
   --accent-color: #ff8dcb;
   --border-hover-color: #35343040;
-  color: var(--text-color);
-  background-color: var(--bg-color);
   background-image: url("../images/cover-image-light.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .page.theme_light .decorated-zone::before {
@@ -39,34 +33,12 @@
   border-block-end : 1px solid var(--text-color);
 }
 
-.page.theme_light .header__theme-menu-button:hover {
-  border: 1px solid var(--border-hover-color);
-}
-
 .page.theme_light .header__theme-menu-button_active {
   border: 1px solid var(--text-color);
 }
 
-.page.theme_light .header__title {
-  color: var(--text-color-header-title);
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
 .page.theme_light .card__title {
   color: var(--text-color);
-  background-color: var(--accent-color);
-}
-
-.page.theme_light .card__link:focus-visible {
-  border: 1px solid var(--text-color);
-}
-
-.page.theme_light .card__link:hover {
-  border-block-end: 1px solid var(--text-color);
-}
-
-.page.theme_light .card__accent {
-  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 .page.theme_light .content__title {
@@ -74,7 +46,6 @@
 }
 
 .page.theme_light .title-decor {
-  background-color: var(--accent-color);
   color: var(--text-color);
 }
 
@@ -86,90 +57,57 @@
 /********************************Медиа запрос (prefers-color-scheme: light) - начало****************************************/
 
 @media (prefers-color-scheme: light) {
-  /*:root {
-
-  }*/
-
-  .page {
+  .page.theme_auto {
     --text-color: #353430;
     --text-color-header-title: #ffc2e6;
     --bg-color: #fff1f7;
     --accent-color: #ff8dcb;
     --border-hover-color: #35343040;
-    color: var(--text-color);
-    background-color: var(--bg-color);
     background-image: url("../images/cover-image-light.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   
-    .decorated-zone::before {
+  .page.theme_auto .decorated-zone::before {
     border-block-start: 1px solid var(--text-color);
     border-inline-end: 1px solid var(--text-color);
   }
-  
-  .decorated-zone::after {
+
+  .page.theme_auto .decorated-zone::after {
     border-block-end: 1px solid var(--text-color);
     border-inline-start: 1px solid var(--text-color);
   }
-  
-  .header__decorative-element{
+
+  .page.theme_auto .header__decorative-element{
     display: none;
   }
-  
-  .header__theme-menu-button {
+
+  .page.theme_auto .header__theme-menu-button {
     color: var(--text-color);
   }
-  
-  .header__theme-menu-button:focus-visible {
+
+  .page.theme_auto .header__theme-menu-button:focus-visible {
     border-block-end : 1px solid var(--text-color);
   }
-  
-  .header__theme-menu-button:hover {
-    border: 1px solid var(--border-hover-color);
-  }
-  
-  .header__theme-menu-button_active {
+
+  .page.theme_auto .header__theme-menu-button_active {
     border: 1px solid var(--text-color);
   }
-  
-  .header__title {
-    color: var(--text-color-header-title);
-    text-shadow: 4px 4px 0 var(--accent-color);
-  }
-  
-  .card__title {
-    color: var(--text-color);
-    background-color: var(--accent-color);
-  }
-  
-  .card__link:focus-visible {
-    border: 1px solid var(--text-color);
-  }
-  
-  .card__link:hover {
-    border-block-end: 1px solid var(--text-color);
-  }
-  
-  .card__accent {
-    text-shadow: 2px 2px 0px var(--accent-color);
-  }
-  
-  .content__title {
+
+  .page.theme_auto .card__title {
     color: var(--text-color);
   }
-  
-  .title-decor {
-    background-color: var(--accent-color);
+
+  .page.theme_auto .content__title {
     color: var(--text-color);
   }
-  
-  .footer__title {
+
+  .page.theme_auto .title-decor {
+    color: var(--text-color);
+  }
+
+  .page.theme_auto .footer__title {
     color: var(--text-color-header-title);
     text-shadow: 2px 2px 0 var(--accent-color);
-  }  
+  }
 }
 
 /********************************Медиа запрос (prefers-color-scheme: light) - конец****************************************/

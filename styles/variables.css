@@ -5,6 +5,7 @@
 :root {
   --main-font: 'IBM Plex mono';
   --font-size: 18px;
+  --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --breakpoint: 767px;
   --breakpoint-simulation: (100vw - var(--breakpoint));
   --text-color: #f1b2ce;
