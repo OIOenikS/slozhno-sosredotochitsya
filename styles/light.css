@@ -1,113 +1,33 @@
-/*:root.theme-light {
-
-}*/
 
 .page.theme_light {
-  --text-color: #353430;
-  --text-color-header-title: #ffc2e6;
-  --bg-color: #fff1f7;
-  --accent-color: #ff8dcb;
-  --border-hover-color: #35343040;
   background-image: url("../images/cover-image-light.png");
+  --color-bg: #fff1f7;
+  --color-main-text: #353430;
+  --color-accent:#ff8dcb;
+  --color-accent-text: #353430;
+  --color-text-header-title: #ffc2e6;
+  --color-text-content-title: #353430;
+  --color-interactive-element: #353430;
+  --color-decorated-zone: #353430;
+  --color-decorative-element: #fff1f7;
+  --border-hover-color: #35343040;
 }
-
-.page.theme_light .decorated-zone::before {
-  border-block-start: 1px solid var(--text-color);
-  border-inline-end: 1px solid var(--text-color);
-}
-
-.page.theme_light .decorated-zone::after {
-  border-block-end: 1px solid var(--text-color);
-  border-inline-start: 1px solid var(--text-color);
-}
-
-.page.theme_light .header__decorative-element{
-  display: none;
-}
-
-.page.theme_light .header__theme-menu-button {
-  color: var(--text-color);
-}
-
-.page.theme_light .header__theme-menu-button:focus-visible {
-  border-block-end : 1px solid var(--text-color);
-}
-
-.page.theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--text-color);
-}
-
-.page.theme_light .card__title {
-  color: var(--text-color);
-}
-
-.page.theme_light .content__title {
-  color: var(--text-color);
-}
-
-.page.theme_light .title-decor {
-  color: var(--text-color);
-}
-
-.page.theme_light .footer__title {
-  color: var(--text-color-header-title);
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-/********************************Медиа запрос (prefers-color-scheme: light) - начало****************************************/
 
 @media (prefers-color-scheme: light) {
-  .page.theme_auto {
-    --text-color: #353430;
-    --text-color-header-title: #ffc2e6;
-    --bg-color: #fff1f7;
-    --accent-color: #ff8dcb;
-    --border-hover-color: #35343040;
+  :root {
+  --color-bg: #fff1f7;
+  --color-main-text: #353430;
+  --color-accent:#ff8dcb;
+  --color-accent-text: #353430;
+  --color-text-header-title: #ffc2e6;
+  --color-text-content-title: #353430;
+  --color-interactive-element: #353430;
+  --color-decorated-zone: #353430;
+  --color-decorative-element: #fff1f7;
+  --border-hover-color: #35343040;
+  }
+
+  .page {
     background-image: url("../images/cover-image-light.png");
   }
-  
-  .page.theme_auto .decorated-zone::before {
-    border-block-start: 1px solid var(--text-color);
-    border-inline-end: 1px solid var(--text-color);
-  }
-
-  .page.theme_auto .decorated-zone::after {
-    border-block-end: 1px solid var(--text-color);
-    border-inline-start: 1px solid var(--text-color);
-  }
-
-  .page.theme_auto .header__decorative-element{
-    display: none;
-  }
-
-  .page.theme_auto .header__theme-menu-button {
-    color: var(--text-color);
-  }
-
-  .page.theme_auto .header__theme-menu-button:focus-visible {
-    border-block-end : 1px solid var(--text-color);
-  }
-
-  .page.theme_auto .header__theme-menu-button_active {
-    border: 1px solid var(--text-color);
-  }
-
-  .page.theme_auto .card__title {
-    color: var(--text-color);
-  }
-
-  .page.theme_auto .content__title {
-    color: var(--text-color);
-  }
-
-  .page.theme_auto .title-decor {
-    color: var(--text-color);
-  }
-
-  .page.theme_auto .footer__title {
-    color: var(--text-color-header-title);
-    text-shadow: 2px 2px 0 var(--accent-color);
-  }
 }
-
-/********************************Медиа запрос (prefers-color-scheme: light) - конец****************************************/

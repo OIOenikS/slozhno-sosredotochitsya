@@ -5,7 +5,7 @@
   font-size: var(--font-size);
   font-weight: 400;
   line-height: 130%;
-  color: var(--text-color);
+  color: var(--color-main-text);
   background-color: var(--bg-color);
   background-image: url("../images/cover-image-dark.png");
   background-position: center;
@@ -36,8 +36,8 @@
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--color-decorated-zone);
+  border-inline-end: 1px solid var(--color-decorated-zone);
   position: absolute;
   inset-inline-end: clamp(10px, var(--breakpoint-simulation) * 1000, 20px);
   inset-block-start: clamp(10px, var(--breakpoint-simulation) * 1000, 20px);
@@ -48,15 +48,15 @@
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--color-decorated-zone);
+  border-inline-start: 1px solid var(--color-decorated-zone);
   position: absolute;
   inset-inline-start: clamp(10px, var(--breakpoint-simulation) * 1000, 20px);
   inset-block-end: clamp(10px, var(--breakpoint-simulation) * 1000, 20px);
 }
 
 .header__decorative-element {
-  color: var(--accent-color);
+  color: var(--color-decorative-element);
   text-transform: uppercase;
   position: absolute;
   inset-inline-end: clamp(11px, var(--breakpoint-simulation) * 1000, 21px);
@@ -69,8 +69,8 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow:  0px 0px 4px 3px var(--accent-color);
+  background-color: var(--color-decorative-element);
+  box-shadow:  0px 0px 4px 3px var(--color-decorative-element);
   margin: 2px 9px;
 }
 
@@ -89,7 +89,7 @@
   text-transform: lowercase;
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--color-interactive-element);
   line-height: 100%;
   cursor: pointer;
 }
@@ -100,7 +100,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end : 1px solid var(--accent-color);
+  border-block-end : 1px solid var(--color-interactive-element);
 }
 
 .header__theme-menu-button:hover {
@@ -108,14 +108,14 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--color-interactive-element);
   pointer-events: none;
 }
 
 .header__title {
   font-size: var(--font-size-title);
-  color: var(--text-color-header-title);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--color-text-header-title);
+  text-shadow: 4px 4px 0 var(--color-accent);
   line-height: 82.5%;
 }
 
@@ -134,8 +134,8 @@
 }
 
 .card__title {
-  color: var(--bg-color);
-  background-color: var(--accent-color);
+  color: var(--color-accent-text);
+  background-color: var(--color-accent);
   font-size: var(--font-size);
   font-weight: 700;
   line-height: 130%;
@@ -151,16 +151,16 @@
 }
 
 .card__link:focus-visible {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--color-main-text);
 }
 
 .card__link:hover {
   border: none;
-  border-block-end: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--border-hover-color);
 }
 
 .card__accent {
-  text-shadow: 2px 2px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--color-accent);
 }
 
 .content {
@@ -173,12 +173,12 @@
   font-size: var(--font-size);
   font-weight: 700;
   line-height: 130%;
-  color: var(--accent-color);
+  color: var(--color-text-content-title);
 }
 
 .title-decor {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 
@@ -219,8 +219,8 @@
 
 .footer__title {
   font-size: var(--font-size-title);
-  color: var(--text-color-header-title);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--color-text-header-title);
+  text-shadow: 2px 2px 0 var(--color-accent);
   line-height: 82.5%;
 }
 
@@ -262,14 +262,14 @@
   .recommendation {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(2, auto);
-  }
+}
 
-  .recommendation__title-first {
+  .recommendation__title {
     grid-column: 1/2;
     grid-row: 1/3;
   }
 
-  .recommendation__title-second {
+  .recommendation__subtitle {
     grid-column: 2/3;
     grid-row: 1/2;
   }
@@ -282,7 +282,7 @@
   .gallery,
   .gallery__list {
     gap: 20px;
-  }
+}
 
   .gallery__list {
     grid-template-columns: repeat(3, auto);
